@@ -9,7 +9,7 @@ primary_region = "iad"
     port = 1883
 
   auto_start_machines = true
-  auto_stop_machines = true
+  auto_stop_machines = false
   min_machines_running = 0
 
 [[vm]]
