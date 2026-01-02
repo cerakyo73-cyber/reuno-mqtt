@@ -1,4 +1,9 @@
 FROM eclipse-mosquitto:2.0
+
+# Copiar configuración de Mosquitto
 COPY mosquitto.conf /mosquitto/config/mosquitto.conf
-EXPOSE 1883
-EXPOSE 9001
+
+# Exponer puertos
+EXPOSE 1883    # TCP MQTT normal (opcional)
+EXPOSE 9001    # WebSockets MQTT
+
