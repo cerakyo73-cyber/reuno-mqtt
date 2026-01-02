@@ -1,26 +1,17 @@
 app = "reuno-mqtt-q7qt9w"
 primary_region = "iad"
 
-# =========================
-# Servicios expuestos
-# =========================
 [[services]]
-  # Puerto interno del broker Mosquitto WebSockets
   internal_port = 9001
   protocol = "tcp"
 
   [[services.ports]]
-    # Puerto público accesible desde ESP32
     port = 9001
 
-  # Autogestión de máquinas
   auto_start_machines = true
   auto_stop_machines = false
   min_machines_running = 1
 
-# =========================
-# Máquinas VM
-# =========================
 [[vm]]
   cpu_kind = "shared"
   cpus = 1
