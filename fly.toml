@@ -1,6 +1,18 @@
+app = "reuno-mqtt-q7qt9w"
+primary_region = "iad"
+
 [[services]]
-  internal_port = 9001
+  internal_port = 9001        # Puerto interno Mosquitto WebSockets
   protocol = "tcp"
 
   [[services.ports]]
-    port = 9001   # puerto público
+    port = 9001               # Puerto público Fly.io
+
+  auto_start_machines = true
+  auto_stop_machines = false
+  min_machines_running = 1
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "1gb"
