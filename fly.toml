@@ -1,18 +1,6 @@
-app = "reuno-mqtt-q7qt9w"
-primary_region = "iad"
-
 [[services]]
-  internal_port = 9001        # Puerto interno para WebSockets
+  internal_port = 9001
   protocol = "tcp"
 
   [[services.ports]]
-    port = 9001               # Puerto público que Fly.io publica
-
-  auto_start_machines = true
-  auto_stop_machines = false
-  min_machines_running = 1
-
-[[vm]]
-  cpu_kind = "shared"
-  cpus = 1
-  memory = "1gb"
+    port = 9001   # puerto público
